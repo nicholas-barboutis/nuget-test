@@ -20,6 +20,8 @@
     <Owners>Partners Healthcare</Owners>
     <Copyright>2017</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageProjectUrl>https://github.com/nicholas-barboutis/nuget-test</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/nicholas-barboutis/nuget-test/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
