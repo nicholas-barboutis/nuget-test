@@ -1,7 +1,7 @@
 #!/bin/bash
 PROJECT_DIRECTORY=$1
 PROJECT_CONFIG=$2
-PACKAGE_VERSION=1.0.8
+PACKAGE_VERSION=1.0.10
 NUPKG=org.partners.cdr.sample.$PACKAGE_VERSION.nupkg
 PKG=$PROJECT_DIRECTORY/bin/$PROJECT_CONFIG/$NUPKG
 NUGET_REPO=http://pcpgm-scm.dipr.partners.org:8081/nexus/repository/hip-nuget-repo/

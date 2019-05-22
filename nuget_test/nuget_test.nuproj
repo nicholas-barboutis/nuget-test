@@ -7,7 +7,7 @@
     <ProjectGuid>{2EA36E6F-7D98-4BA2-ACB1-3ECA2CB8DF3F}</ProjectGuid>
     <Description>Simple Console application that will add a list of numbers</Description>
     <PackageId>org.partners.cdr.sample</PackageId>
-    <PackageVersion>1.0.8</PackageVersion>
+    <PackageVersion>1.0.10</PackageVersion>
     <Authors>Nicholas Barboutis</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
