@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{5DD5E4FA-CB73-4610-85AB-557B54E96AA9}") = "nuget_test", "nuget_test\nuget_test.nuproj", "{2EA36E6F-7D98-4BA2-ACB1-3ECA2CB8DF3F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DC57F81C-1ED1-431D-A831-EE0E334D32BE}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
