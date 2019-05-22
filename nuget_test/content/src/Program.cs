@@ -8,7 +8,7 @@ namespace test
         static void Main(string[] args)
         {
             bool keep_going = true;
-            Console.WriteLine("Version 1.0.10");
+            Console.WriteLine("Version 1.0.11");
             Console.WriteLine("Please enter a series of numbers line seperated by a ',' comma.");
             Console.WriteLine("The sum of the numbers will be returned.");
             Console.WriteLine("For example, 1,2,3 will return a value of 6.");
