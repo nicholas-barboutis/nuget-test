@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EA36E6F-7D98-4BA2-ACB1-3ECA2CB8DF3F}</ProjectGuid>
+    <Description>Simple Console application that will add a list of numbers</Description>
+    <PackageId>org.partners.cdr.sample</PackageId>
+    <PackageVersion>1.0.8</PackageVersion>
+    <Authors>Nicholas Barboutis</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>nuget_test</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>nuget_test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ReleaseVersion>1.0.0.1</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+     <CustomCommands>
+       <CustomCommands>
+         <Command>
+           <type>Custom</type>
+           <name>nuget push </name>
+           <command>scripts/nuget_push.sh ${ProjectDir} ${ProjectConfig} </command>
+           <workingdir>${ProjectDir}</workingdir>
+           <externalConsole>True</externalConsole>
+         </Command>
+         <Command>
+           <type>Custom</type>
+           <name>install template</name>
+           <command>scripts/install_template.sh</command>
+         </Command>
+         <Command>
+           <type>Custom</type>
+           <name>uninstall template</name>
+           <command>scripts/uninstall_template.sh</command>
+         </Command>
+       </CustomCommands>
+     </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="readme.txt">
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+    <None Include="content\.template.config\template.json">
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+    <None Include="content\src\Program.cs">
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+    <None Include="content\src\test.csproj">
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+    <None Include="scripts\install_template.sh" />
+    <None Include="scripts\nuget_push.sh" />
+    <None Include="scripts\uninstall_template.sh" />
+    <None Include="LICENSE">
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.0</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="content\" />
+    <Folder Include="content\src\" />
+    <Folder Include="content\.template.config\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>
