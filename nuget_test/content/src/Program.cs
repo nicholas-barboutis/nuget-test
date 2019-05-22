@@ -11,7 +11,7 @@ namespace test
             Console.WriteLine("Version 1.0.11");
             Console.WriteLine("Please enter a series of numbers line seperated by a ',' comma.");
             Console.WriteLine("The sum of the numbers will be returned.");
-            Console.WriteLine("For example, 1,2,3 will return a value of 6.");
+            Console.WriteLine("For example, 1.2,2.3,3 will return a value of 6.5.");
             Console.WriteLine("Invalid entries will be ignored.");
             Console.WriteLine();
             do
