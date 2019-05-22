@@ -21,7 +21,7 @@
     <Copyright>2019</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageProjectUrl>https://github.com/nicholas-barboutis/nuget-test</PackageProjectUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/nicholas-barboutis/nuget-test/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/nicholas-barboutis/nuget-test/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
