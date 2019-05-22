@@ -19,7 +19,7 @@ namespace test
 
                 Console.WriteLine("Please enter a series of number series:");
                 string input = Console.ReadLine();
-                int sum = 0;
+                double sum = 0;
                 if (input == "")
                 {
                     keep_going = false;
